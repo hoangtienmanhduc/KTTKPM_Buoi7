@@ -18,4 +18,14 @@ public class Controller {
 
         return restTemplate.postForObject("http://localhost:8080/register",user,User.class);
     }
+    @PostMapping("/login")
+    public User login(@RequestBody User user){
+
+        return restTemplate.postForObject("http://localhost:8080/login",user,User.class);
+    }
+    @GetMapping("/getUser")
+    public User getUser(@RequestBody User user){
+
+        return restTemplate.postForObject("http://localhost:8080/getUser",user,User.class);
+    }
 }
